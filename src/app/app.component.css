@@ -1,0 +1,28 @@
+.round-button {
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 3em;
+    height: 3em;
+}
+
+.round-button:active {
+    transform: scale(0.80);
+}
+
+.white {
+    color: white;
+}
+
+.title {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    color: white;
+    font-size: 64px;
+    font-family: AppFont
+}
