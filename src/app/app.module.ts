@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NavbarModule } from './navbar/navbar.module';
-import { GamecoreModule } from './GameCore/gamecore.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,6 @@ import { GamecoreModule } from './GameCore/gamecore.module';
     BrowserModule,
     AppRoutingModule,
     NavbarModule,
-    GamecoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

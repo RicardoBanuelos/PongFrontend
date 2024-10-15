@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path : "",
-    loadChildren : () => import("./GameCore/gamecore.module").then(m => m.GamecoreModule)
+    loadChildren : () => import("./pages/pages.module").then(m => m.PagesModule)
   }
 
 ];
