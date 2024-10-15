@@ -4,24 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { MainpageComponent } from './mainpage/mainpage.component';
-import { LocalgamepageComponent } from './localgamepage/localgamepage.component';
-import { GamepageComponent } from './gamepage/gamepage.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { UserpageComponent } from './userpage/userpage.component';
+import { NavbarModule } from './navbar/navbar.module';
+import { LocalgamepageModule } from './localgamepage/localgamepage.module';
+import { LocalgameComponent } from './localgame/localgame.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    MainpageComponent,
-    LocalgamepageComponent,
-    GamepageComponent,
-    UserpageComponent
+    LocalgameComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NavbarModule,
+    LocalgamepageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,9 +4,11 @@ import { LocalgamepageComponent } from './localgamepage.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [LocalgamepageComponent],
-  declarations: [LocalgamepageComponent]
+  declarations: [
+    LocalgamepageComponent,
+  ]
 })
 export class LocalgamepageModule { }
