@@ -5,19 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NavbarModule } from './navbar/navbar.module';
-import { LocalgamepageModule } from './localgamepage/localgamepage.module';
-import { LocalgameComponent } from './localgame/localgame.component';
+import { GamecoreModule } from './GameCore/gamecore.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LocalgameComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NavbarModule,
-    LocalgamepageModule
+    GamecoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

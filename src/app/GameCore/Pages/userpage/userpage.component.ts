@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-userpage',
+  selector: 'app-gamecore-userpage',
   templateUrl: './userpage.component.html',
   styleUrls: ['./userpage.component.css']
 })
