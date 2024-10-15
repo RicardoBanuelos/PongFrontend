@@ -1,0 +1,21 @@
+.round-button {
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  cursor: none;
+  width: 3em;
+  height: 3em;
+}
+
+.round-button:active {
+  transform: scale(0.80);
+}
+
+.white {
+  color: white;
+  cursor: pointer;
+}
+
+.white:hover {
+  color: #1E90FF;
+}
