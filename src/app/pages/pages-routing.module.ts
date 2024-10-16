@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { LocalGameComponent } from './local-game/local-game.component';
-import { OnlineGameComponent } from './online-game/online-game.component';
-import { UserComponent } from './user/user.component';
+import { LocalGamePageComponent } from './local-game-page/local-game-page.component';
+import { OnlineGamePageComponent } from './online-game-page/online-game-page.component';
+import { UserPageComponent } from './user-page/user-page.component';
 
 const routes: Routes = [
 
   {
     path : "user",
-    component : UserComponent
+    component : UserPageComponent
   },
   {
     path : "home",
@@ -18,11 +18,11 @@ const routes: Routes = [
   },
   {
     path : "local-game",
-    component : LocalGameComponent
+    component : LocalGamePageComponent
   },
   {
     path : "online-game",
-    component : OnlineGameComponent
+    component : OnlineGamePageComponent
   },
 
   {
@@ -37,7 +37,6 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   exports: [RouterModule],
-
 })
 
 export class PagesRoutingModule { }
