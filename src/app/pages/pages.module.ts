@@ -6,18 +6,22 @@ import { LocalGamePageComponent } from './local-game-page/local-game-page.compon
 import { OnlineGamePageComponent } from './online-game-page/online-game-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { CoreModule } from '../core/core.module';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     PagesRoutingModule,
-    CoreModule
+    CoreModule,
+    FormsModule
   ],
   declarations: [
     HomeComponent,
     LocalGamePageComponent,
     OnlineGamePageComponent,
-    UserPageComponent
+    UserPageComponent,
+    LoginPageComponent
   ]
 })
 export class PagesModule { }

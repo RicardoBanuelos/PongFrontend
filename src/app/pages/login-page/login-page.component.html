@@ -1,0 +1,65 @@
+<div class="title-container">
+  <h1 routerLink="/home" class="title">PONG</h1>
+</div>
+
+<div class="login-container">
+  <p class="login-text big-text">Login</p>
+  <form (ngSubmit)="onLogin()">
+    <div class="form-group">
+      <label for="username" class="login-text medium-text">
+        Username:
+      </label>
+      <input
+        class="small-text"
+        type="text"
+        id="username"
+        [(ngModel)]="username"
+        name="username"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="password" class="login-text medium-text">
+        Password:
+      </label>
+      <input
+        class="small-text"
+        type="password"
+        id="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+      />
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<!-- <div class="login-container">
+  <h2>Login</h2>
+  <form (ngSubmit)="onLogin()">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        [(ngModel)]="username"
+        name="username"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+      />
+    </div>
+
+    <button type="submit">Login</button>
+  </form>
+</div> -->

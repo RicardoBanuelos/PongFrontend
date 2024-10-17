@@ -16,14 +16,14 @@ export class LocalGameComponent implements OnInit {
       meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
       document.getElementsByTagName('head')[0].appendChild(meta);
 
-      var canvas = document.querySelector("#unity-canvas");
-      //@ts-ignore
-      canvas.style.width = "100%";
-      //@ts-ignore
-      canvas.style.height = "100%";
-      //@ts-ignore
-      canvas.style.position = "fixed";
-      document.body.style.textAlign = "left";
+      // var canvas = document.querySelector("#unity-canvas");
+      // //@ts-ignore
+      // canvas.style.width = "100%";
+      // //@ts-ignore
+      // canvas.style.height = "100%";
+      // //@ts-ignore
+      // canvas.style.position = "fixed";
+      // document.body.style.textAlign = "left";
     }
 
     //@ts-ignore

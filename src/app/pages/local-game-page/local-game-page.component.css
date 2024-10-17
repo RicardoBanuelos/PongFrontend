@@ -1,0 +1,30 @@
+.top-container {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-family: AppFont;
+  font-size: 6rem;
+  color: white;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: #1E90FF;
+}
+
+.bottom-container {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  font-family: AppFont;
+  font-size: 3rem;
+  color: white;
+  align-self: left;
+}

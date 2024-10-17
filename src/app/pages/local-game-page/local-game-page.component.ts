@@ -5,4 +5,5 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './local-game-page.component.html',
   styleUrls: ['./local-game-page.component.css']
 })
+
 export class LocalGamePageComponent {}
