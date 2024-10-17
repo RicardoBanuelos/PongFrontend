@@ -6,6 +6,7 @@ import { LocalGamePageComponent } from './local-game-page/local-game-page.compon
 import { OnlineGamePageComponent } from './online-game-page/online-game-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 
 const routes: Routes = [
 
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path : "login",
     component : LoginPageComponent
+  },
+  {
+    path : "sign-up",
+    component : SignUpPageComponent
   },
   {
     path : "local-game",
