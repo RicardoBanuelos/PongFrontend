@@ -1,0 +1,16 @@
+<div class="form-group">
+  <label [for]="name" class="login-text medium-text">
+    {{label}}
+  </label>
+  <input
+    class="small-text"
+    [id]="id"
+    [value]="value"
+    [type]="type"
+    [name]="name"
+    [placeholder]="placeholder"
+    [required]="required"
+    [disabled]="disabled"
+    (input)="onValueChange($event)"
+  />
+</div>

@@ -4,6 +4,7 @@ import { PagesRoutingModule } from '../pages/pages-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ButtonComponent } from './components/button/button.component';
 import { HomeTitleComponent } from './components/home-title/home-title.component';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
   imports: [
@@ -13,12 +14,14 @@ import { HomeTitleComponent } from './components/home-title/home-title.component
   exports: [
     NavbarComponent,
     ButtonComponent,
-    HomeTitleComponent
+    HomeTitleComponent,
+    InputComponent
   ],
   declarations: [
     NavbarComponent,
     ButtonComponent,
-    HomeTitleComponent
+    HomeTitleComponent,
+    InputComponent
   ]
 })
 export class SharedModule { }

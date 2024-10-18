@@ -4,32 +4,22 @@
 
 <div class="login-container">
   <form (ngSubmit)="onLogin()">
-    <div class="form-group">
-      <label for="username" class="login-text medium-text">
-        Username:
-      </label>
-      <input
-        class="small-text"
-        type="text"
-        id="username"
-        [(ngModel)]="username"
-        name="username"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label for="password" class="login-text medium-text">
-        Password:
-      </label>
-      <input
-        class="small-text"
-        type="password"
-        id="password"
-        [(ngModel)]="password"
-        name="password"
-        required
-      />
-    </div>
+    <app-input
+      [label]="'Username'"
+      [id]="'username'"
+      [(value)]="username"
+      [type]="'text'"
+      [name]="'username'"
+      [required]="true">
+    </app-input>
+    <app-input
+      [label]="'Password'"
+      [id]="'password'"
+      [(value)]="password"
+      [type]="'password'"
+      [name]="'password'"
+      [required]="true">
+    </app-input>
     <app-button
       [text]="'Login'" [size]="'2rem'" [type]="'submit'">
     </app-button>

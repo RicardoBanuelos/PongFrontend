@@ -17,34 +17,6 @@
   font-family: AppFont;
 }
 
-.big-text {
-  font-size: 3rem;
-}
-
-.medium-text {
-  font-size: 2rem;
-}
-
-.small-text {
-  font-size: 1.8rem;
-}
-
-.form-group {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-input {
-  height: 2.5rem;
-  background-color: transparent;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  outline: none;
-  color: white;
-  font-family: AppFont;
-}
-
 .sign-in-div {
   margin-top: 2rem;
 }

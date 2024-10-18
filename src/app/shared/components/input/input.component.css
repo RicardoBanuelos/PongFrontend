@@ -1,0 +1,33 @@
+input {
+  height: 2.5rem;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+  color: white;
+  font-family: AppFont;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px black inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+label {
+  color: white;
+  font-family: AppFont;
+}
+
+.medium-text {
+  font-size: 2rem;
+}
+
+.small-text {
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}

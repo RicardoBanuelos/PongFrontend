@@ -15,12 +15,4 @@ export class ButtonComponent {
   onClick() {
     this.buttonClick.emit();
   }
-
-  getSize() {
-    return this.size;
-  }
-
-  getType() {
-    return this.type;
-  }
 }

@@ -11,7 +11,7 @@ export class SignUpPageComponent  {
   username: string = '';
   password: string = '';
 
-  onLogin() {
+  onSignUp() {
     console.log('Email:', this.email);
     console.log('Username:', this.username);
     console.log('Password:', this.password);
