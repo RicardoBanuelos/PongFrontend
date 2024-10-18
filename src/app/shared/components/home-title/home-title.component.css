@@ -1,0 +1,9 @@
+.title {
+  color: white;
+  font-family: AppFont;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: #1E90FF;
+}

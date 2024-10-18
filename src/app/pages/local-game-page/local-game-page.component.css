@@ -1,22 +1,11 @@
 .top-container {
-  margin-top: 1em;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
 }
 
-.title {
-  font-family: AppFont;
-  font-size: 6rem;
-  color: white;
-  cursor: pointer;
-}
-
-.title:hover {
-  color: #1E90FF;
-}
-
 .bottom-container {
-  margin-top: 5em;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,9 +1,17 @@
 <div class="title-container">
-  <h1 routerLink="/home" class="title">PONG</h1>
+  <home-title></home-title>
 </div>
 <div class="button-container">
-  <button routerLink="/local-game">Local</button>
-  <button routerLink="/online-game">Online</button>
+  <app-button
+    [text]="'Local'"
+    [size]="'3rem'"
+    (buttonClick)="goToLocalGame()">
+  </app-button>
+  <app-button
+    [text]="'Online'"
+    [size]="'3rem'"
+    (buttonClick)="goToOnlineGame()">
+  </app-button>
 </div>
 
 

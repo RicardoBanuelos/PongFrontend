@@ -1,0 +1,22 @@
+button {
+  margin-top: 2em;
+  padding: .5em;
+  border-radius: 10px;
+
+  background-color: transparent;
+  border: 1px solid white;
+
+  cursor: pointer;
+
+  font-family: AppFont;
+  color: white;
+}
+
+button:hover {
+  border: 1px solid #1E90FF;
+  color: #1E90FF;
+}
+
+button:active {
+  transform: scale(0.80);
+}

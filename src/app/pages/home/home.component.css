@@ -4,43 +4,8 @@
   justify-content: center;
 }
 
-.title {
-  color: white;
-  font-size: 10rem;
-  font-family: AppFont;
-  cursor: pointer;
-}
-
-.title:hover {
-  color: #1E90FF;
-}
-
 .button-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-button {
-  margin-top: 2em;
-  padding: .5em;
-  border-radius: 10px;
-
-  background-color: transparent;
-  border: 1px solid white;
-
-  cursor: pointer;
-
-  font-family: AppFont;
-  font-size: 3rem;
-  color: white;
-}
-
-button:hover {
-  border: 1px solid #1E90FF;
-  color: #1E90FF;
-}
-
-button:active {
-  transform: scale(0.80);
 }

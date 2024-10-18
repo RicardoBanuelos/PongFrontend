@@ -1,18 +1,7 @@
 .title-container{
-  margin-top: 1em;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
-}
-
-.title {
-  color: white;
-  font-size: 10rem;
-  font-family: AppFont;
-  cursor: pointer;
-}
-
-.title:hover {
-  color: #1E90FF;
 }
 
 .login-container {
@@ -41,13 +30,13 @@
 }
 
 .form-group {
-  margin-top: 2em;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
 }
 
 input {
-  height: 2.5em;
+  height: 2.5rem;
   background-color: transparent;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -56,30 +45,6 @@ input {
   font-family: AppFont;
 }
 
-button {
-  margin-top: 2em;
-  padding: .5em;
-  border-radius: 10px;
-
-  background-color: transparent;
-  border: 1px solid white;
-
-  cursor: pointer;
-
-  font-family: AppFont;
-  font-size: 2rem;
-  color: white;
-}
-
-button:hover {
-  border: 1px solid #1E90FF;
-  color: #1E90FF;
-}
-
-button:active {
-  transform: scale(0.80);
-}
-
 .sign-in-div {
-  margin-top: 2em;
+  margin-top: 2rem;
 }

@@ -9,14 +9,16 @@ import { CoreModule } from '../core/core.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FormsModule } from '@angular/forms';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   imports: [
     CommonModule,
     PagesRoutingModule,
     CoreModule,
-    FormsModule
-  ],
+    FormsModule,
+    SharedModule
+],
   declarations: [
     HomeComponent,
     LocalGamePageComponent,

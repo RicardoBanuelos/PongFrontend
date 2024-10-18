@@ -1,9 +1,8 @@
 <div class="title-container">
-  <h1 routerLink="/home" class="title">PONG</h1>
+  <home-title></home-title>
 </div>
 
 <div class="login-container">
-  <p class="login-text big-text">Sign Up</p>
   <form (ngSubmit)="onLogin()">
     <div class="form-group">
       <label for="email" class="login-text medium-text">
@@ -44,7 +43,9 @@
         required
       />
     </div>
-    <button type="submit">Login</button>
+    <app-button
+      [text]="'Sign Up'" [size]="'2rem'" [type]="'submit'">
+    </app-button>
   </form>
   <div class="sign-in-div">
     <p class="login-text">Have an account? <a [routerLink]="['/login']">Login</a></p>
