@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AxiosService } from './core/services/axios.service';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +7,4 @@ import { AxiosService } from './core/services/axios.service';
 })
 export class AppComponent {
   title = 'pong-frontend';
-  constructor(private axiosService: AxiosService) {
-    this.axiosService.request(
-      "GET",
-      "/messages",
-      []
-    ).then(
-      (response) => console.log(response.data)
-    );
-  }
 }

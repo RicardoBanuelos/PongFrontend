@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { AxiosService } from '../../core/services/axios.service';
+import axios from 'axios';
 
 @Component({
   selector: 'app-sign-up-page',
@@ -7,14 +9,22 @@ import { Component } from '@angular/core';
 })
 export class SignUpPageComponent  {
 
+  constructor(private axiosService : AxiosService) {}
+
   email: string = '';
   username: string = '';
   password: string = '';
 
   onSignUp() {
-    console.log('Email:', this.email);
-    console.log('Username:', this.username);
-    console.log('Password:', this.password);
-    // Add authentication logic here
+    this.axiosService.request(
+      "POST",
+      "/register",
+      {
+        "email": this.email,
+        "username" : this.username,
+        "password" : this.password
+      }).then(
+        (response) => console.log(response.data)
+      );
   }
 }

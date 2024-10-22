@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AxiosService } from '../../core/services/axios.service';
 
 @Component({
   selector: 'app-login-page',
@@ -8,12 +9,20 @@ import { Component } from '@angular/core';
 
 export class LoginPageComponent {
 
+  constructor(private axiosService: AxiosService) {}
+
   username: string = '';
   password: string = '';
 
   onLogin() {
-    console.log('Username:', this.username);
-    console.log('Password:', this.password);
-    // Add authentication logic here
+    this.axiosService.request(
+      "POST",
+      "/login",
+      {
+        "username" : this.username,
+        "password" : this.password
+      }).then(
+        (response) => console.log(response.data)
+      );
   }
 }
