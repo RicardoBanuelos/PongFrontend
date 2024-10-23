@@ -3,31 +3,78 @@
 </div>
 
 <div class="login-container">
-  <form (ngSubmit)="onSignUp()" #loginForm="">
+  <form (ngSubmit)="onSignUp()" [formGroup]="signUpForm">
     <app-input
       [label]="'Email'"
       [id]="'email'"
-      [(value)]="email"
-      [type]="'email'"
-      [name]="'email'"
-      [required]="true">
+      [(value)]="signUpForm.get('email')!.value"
+      (valueChange)="signUpForm.get('email')!.setValue($event)"
+      [type]="'email'">
     </app-input>
+    <app-error-message
+      [showError]="signUpForm.get('email')?.invalid!
+                && signUpForm.get('email')?.touched!"
+      [errorMessage]="'Invalid Email'"
+    >
+    </app-error-message>
+
+    <app-input
+      [label]="'First Name'"
+      [id]="'firstname'"
+      [(value)]="signUpForm.get('firstname')!.value"
+      (valueChange)="signUpForm.get('firstname')!.setValue($event)">
+    </app-input>
+    <app-error-message
+      [showError]="signUpForm.get('firstname')?.invalid!
+                && signUpForm.get('firstname')?.touched!"
+      [errorMessage]="'Invalid First Name'"
+    >
+    </app-error-message>
+
+    <app-input
+      [label]="'Last Name'"
+      [id]="'lastname'"
+      [(value)]="signUpForm.get('lastname')!.value"
+      (valueChange)="signUpForm.get('lastname')!.setValue($event)">
+    </app-input>
+    <app-error-message
+      [showError]="signUpForm.get('lastname')?.invalid!
+                && signUpForm.get('lastname')?.touched!"
+      [errorMessage]="'Invalid Last Name'"
+    >
+    </app-error-message>
+
     <app-input
       [label]="'Username'"
       [id]="'username'"
-      [(value)]="username"
+      [(value)]="signUpForm.get('username')!.value"
+      (valueChange)="signUpForm.get('username')!.setValue($event)"
       [type]="'text'"
       [name]="'username'"
       [required]="true">
     </app-input>
+    <app-error-message
+      [showError]="signUpForm.get('username')?.invalid!
+                && signUpForm.get('username')?.touched!"
+      [errorMessage]="'Invalid Username'"
+    >
+    </app-error-message>
+
     <app-input
       [label]="'Password'"
       [id]="'password'"
-      [(value)]="password"
+      [(value)]="signUpForm.get('password')!.value"
+      (valueChange)="signUpForm.get('password')!.setValue($event)"
       [type]="'password'"
       [name]="'password'"
       [required]="true">
     </app-input>
+    <app-error-message
+      [showError]="signUpForm.get('password')?.invalid!
+                && signUpForm.get('password')?.touched!"
+      [errorMessage]="'Must contain: Upper Char | Lower Char | Special Char | Number'"
+    >
+    </app-error-message>
     <app-button
       [text]="'Sign Up'" [size]="'2rem'" [type]="'submit'">
     </app-button>

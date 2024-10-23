@@ -1,0 +1,9 @@
+.error-messages {
+
+}
+
+.error-message {
+  font-family: AppFont;
+  font-size: 1.5rem;
+  color: red;
+}

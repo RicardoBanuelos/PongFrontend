@@ -7,7 +7,7 @@ import { OnlineGamePageComponent } from './online-game-page/online-game-page.com
 import { UserPageComponent } from './user-page/user-page.component';
 import { CoreModule } from '../core/core.module';
 import { LoginPageComponent } from './login-page/login-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { SharedModule } from "../shared/shared.module";
 
@@ -17,7 +17,8 @@ import { SharedModule } from "../shared/shared.module";
     PagesRoutingModule,
     CoreModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
 ],
   declarations: [
     HomeComponent,

@@ -5,6 +5,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ButtonComponent } from './components/button/button.component';
 import { HomeTitleComponent } from './components/home-title/home-title.component';
 import { InputComponent } from './components/input/input.component';
+import { ErrorMessageComponent } from './components/ErrorMessage/ErrorMessage.component';
 
 @NgModule({
   imports: [
@@ -15,13 +16,15 @@ import { InputComponent } from './components/input/input.component';
     NavbarComponent,
     ButtonComponent,
     HomeTitleComponent,
-    InputComponent
+    InputComponent,
+    ErrorMessageComponent
   ],
   declarations: [
     NavbarComponent,
     ButtonComponent,
     HomeTitleComponent,
-    InputComponent
+    InputComponent,
+    ErrorMessageComponent
   ]
 })
 export class SharedModule { }
