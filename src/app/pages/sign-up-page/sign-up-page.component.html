@@ -1,5 +1,10 @@
 <div class="title-container">
   <home-title></home-title>
+  <app-error-message
+      [showError]="signUpError"
+      [errorMessage]="signUpErrorMessage"
+    >
+    </app-error-message>
 </div>
 
 <div class="login-container">

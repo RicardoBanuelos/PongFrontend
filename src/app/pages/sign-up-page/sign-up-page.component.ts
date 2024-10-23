@@ -22,12 +22,11 @@ export class SignUpPageComponent  {
     });
   }
 
-  invalidEmail: boolean = false;
+  signUpError: boolean = false;
+  signUpErrorMessage: string = ''
 
   onSignUp() {
     this.signUpForm.markAllAsTouched()
-    console.log(this.signUpForm.value)
-
     if(this.signUpForm.invalid) {
       return;
     }
@@ -43,12 +42,17 @@ export class SignUpPageComponent  {
         "password" : this.signUpForm.get('password')?.value
       }).then(
         (response) => {
-          console.log(response.data)
           this.axiosService.setAuthToken(response.data.token)
+          this.signUpError = false;
+          this.signUpErrorMessage = ''
         }
       ).catch(
         error => {
-          console.log(error.response.data.message)
+          if(error.status == 409)
+          {
+            this.signUpError= true;
+            this.signUpErrorMessage = error.response.data.message
+          }
         }
       );
   }

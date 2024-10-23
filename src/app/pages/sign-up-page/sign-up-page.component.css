@@ -1,7 +1,8 @@
 .title-container{
   margin-top: 1rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login-container {
