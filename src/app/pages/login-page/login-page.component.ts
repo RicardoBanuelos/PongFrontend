@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AxiosService } from '../../core/services/axios.service';
+import { AuthService } from '../../core/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -9,7 +11,9 @@ import { AxiosService } from '../../core/services/axios.service';
 
 export class LoginPageComponent {
 
-  constructor(private axiosService: AxiosService) {}
+  constructor(private axiosService: AxiosService,
+              private authService: AuthService,
+              private router : Router) {}
 
   username: string = '';
   password: string = '';
@@ -22,7 +26,13 @@ export class LoginPageComponent {
         "username" : this.username,
         "password" : this.password
       }).then(
-        (response) => console.log(response.data)
-      );
+        (response) => {
+          this.authService.setToken(response.data.token)
+          this.router.navigateByUrl('/user')
+        }
+      ).catch(error => {
+        console.log(error)
+        this.authService.logout()
+      });
   }
 }

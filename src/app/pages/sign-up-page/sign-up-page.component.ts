@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AxiosService } from '../../core/services/axios.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../core/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up-page',
@@ -11,7 +13,9 @@ export class SignUpPageComponent  {
 
   signUpForm: FormGroup;
   constructor(private axiosService : AxiosService,
-              private formBuilder : FormBuilder)
+              private authService : AuthService,
+              private formBuilder : FormBuilder,
+              private router : Router)
   {
     this.signUpForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -42,9 +46,8 @@ export class SignUpPageComponent  {
         "password" : this.signUpForm.get('password')?.value
       }).then(
         (response) => {
-          this.axiosService.setAuthToken(response.data.token)
-          this.signUpError = false;
-          this.signUpErrorMessage = ''
+          this.authService.setToken(response.data.token)
+          this.router.navigateByUrl('/user')
         }
       ).catch(
         error => {
@@ -53,6 +56,8 @@ export class SignUpPageComponent  {
             this.signUpError= true;
             this.signUpErrorMessage = error.response.data.message
           }
+
+          this.authService.logout()
         }
       );
   }
