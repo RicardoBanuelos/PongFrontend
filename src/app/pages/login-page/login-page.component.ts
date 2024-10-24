@@ -31,6 +31,7 @@ export class LoginPageComponent {
     if(this.loginForm.invalid) {
       this.loginError = true;
       this.loginErrorMessage = "Missing credentials"
+      return;
     }
 
     this.axiosService.request(

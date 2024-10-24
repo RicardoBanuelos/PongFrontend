@@ -1,5 +1,11 @@
 <nav class="navbar navbar-expand-lg d-flex justify-content-end">
+  <button class="round-button" (click)="homeIconClick()">
+    <i class="fa fa-home fa-2x white"></i>
+  </button>
   <button class="round-button" (click)="userIconClick()">
       <i class="fa fa-user fa-2x white"></i>
   </button>
+  <button *ngIf="isLoggedIn()" class="round-button" (click)="logoutClick()">
+    <i class="fa fa-sign-out fa-2x white"></i>
+</button>
 </nav>

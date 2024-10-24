@@ -13,13 +13,25 @@ export class NavbarComponent {
               private authService: AuthService
   ){}
 
-  loggedIn: boolean = false
+  isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
+  }
+
+  homeIconClick() {
+    this.router.navigateByUrl("/home");
+  }
+
   userIconClick() {
     if(this.authService.isLoggedIn()) {
-      this.router.navigateByUrl('/user')
+      this.router.navigateByUrl('/user');
     }
     else {
-      this.router.navigateByUrl('/login')
+      this.router.navigateByUrl('/login');
     }
+  }
+
+  logoutClick() {
+    this.authService.logout();
+    this.router.navigateByUrl('/login');
   }
 }
