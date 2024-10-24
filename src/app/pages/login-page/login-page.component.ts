@@ -18,6 +18,11 @@ export class LoginPageComponent {
               private formBuilder: FormBuilder,
               private router : Router)
   {
+    if(this.authService.isLoggedIn()) {
+      this.authService.logout()
+      this.router.navigateByUrl("/user")
+    }
+
     this.loginForm = this.formBuilder.group({
       username: ['', [Validators.required]],
       password: ['', [Validators.required]]

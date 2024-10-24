@@ -17,6 +17,11 @@ export class SignUpPageComponent  {
               private formBuilder : FormBuilder,
               private router : Router)
   {
+    if(this.authService.isLoggedIn()) {
+      this.authService.logout()
+      this.router.navigateByUrl("/user")
+    }
+
     this.signUpForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       firstname: ['', [Validators.required]],

@@ -1,3 +1,47 @@
-.text {
+.user-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.user-image-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-right: 5rem;
+}
+
+.user-record-container {
+
+}
+
+.match-history-container {
+
+}
+
+.user-image {
+  max-width: 256px;
+  max-height: 256px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.app-font {
+  font-family: AppFont;
   color: white;
 }
+
+.font-3rem {
+  font-size: 3rem;
+}
+
+.font-2rem {
+  font-size: 2rem;
+}
+
+.font-1rem {
+  font-size: 1rem;
+}
+
