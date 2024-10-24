@@ -1,24 +1,26 @@
 <div class="title-container">
   <home-title></home-title>
+  <app-error-message
+      [showError]="loginError"
+      [errorMessage]="loginErrorMessage"
+  >
+  </app-error-message>
 </div>
 
 <div class="login-container">
-  <form (ngSubmit)="onLogin()">
+  <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
     <app-input
       [label]="'Username'"
       [id]="'username'"
-      [(value)]="username"
-      [type]="'text'"
-      [name]="'username'"
-      [required]="true">
+      [(value)]="loginForm.get('username')!.value"
+      (valueChange)="loginForm.get('username')!.setValue($event)">
     </app-input>
     <app-input
       [label]="'Password'"
       [id]="'password'"
-      [(value)]="password"
-      [type]="'password'"
-      [name]="'password'"
-      [required]="true">
+      [(value)]="loginForm.get('password')!.value"
+      (valueChange)="loginForm.get('password')!.setValue($event)"
+      [type]="'password'">
     </app-input>
     <app-button
       [text]="'Login'" [size]="'2rem'" [type]="'submit'">

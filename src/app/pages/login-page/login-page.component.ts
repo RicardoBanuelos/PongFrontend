@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AxiosService } from '../../core/services/axios.service';
 import { AuthService } from '../../core/services/auth.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login-page',
@@ -11,20 +12,33 @@ import { Router } from '@angular/router';
 
 export class LoginPageComponent {
 
+  loginForm: FormGroup;
   constructor(private axiosService: AxiosService,
               private authService: AuthService,
-              private router : Router) {}
+              private formBuilder: FormBuilder,
+              private router : Router)
+  {
+    this.loginForm = this.formBuilder.group({
+      username: ['', [Validators.required]],
+      password: ['', [Validators.required]]
+    })
+  }
 
-  username: string = '';
-  password: string = '';
+  loginError: boolean = false;
+  loginErrorMessage: string = ''
 
   onLogin() {
+    if(this.loginForm.invalid) {
+      this.loginError = true;
+      this.loginErrorMessage = "Missing credentials"
+    }
+
     this.axiosService.request(
       "POST",
       "/login",
       {
-        "username" : this.username,
-        "password" : this.password
+        "username" : this.loginForm.get('username')?.value,
+        "password" : this.loginForm.get('password')?.value
       }).then(
         (response) => {
           this.authService.setToken(response.data.token)
@@ -33,6 +47,8 @@ export class LoginPageComponent {
       ).catch(error => {
         console.log(error)
         this.authService.logout()
+        this.loginError = true;
+        this.loginErrorMessage = "Wrong username or password"
       });
   }
 }
