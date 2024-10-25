@@ -1,0 +1,13 @@
+<div class="match-container">
+  <div class="player-one-container">
+    <p class="app-text medium-text" [ngStyle]="{'color': playerOneColor}">
+      {{playerOneUsername}}
+    </p>
+  </div>
+  <div class="score-container">
+    <p class="app-text medium-text">{{getScore()}}</p>
+  </div>
+  <div class="player-two-container">
+    <p class="app-text medium-text" [ngStyle]="{'color': playerTwoColor}">{{playerTwoUsername}}</p>
+  </div>
+</div>

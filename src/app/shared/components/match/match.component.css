@@ -1,0 +1,37 @@
+.match-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 1rem;
+}
+
+.player-one-container {
+
+}
+
+.score-container {
+
+}
+
+.player-two-container {
+
+}
+
+.app-text {
+  color: white;
+  font-family: AppFont;
+}
+
+.small-text {
+  font-size: 1rem;
+}
+
+.medium-text {
+  font-size: 1.5rem;
+}
+
+.large-text {
+  font-size: 2rem;
+}
+
+
