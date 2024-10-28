@@ -1,8 +1,15 @@
+.test {
+  margin: 1rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
 .match-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 1rem;
+  align-items: center;
 }
 
 .player-one-container {
@@ -20,6 +27,7 @@
 .app-text {
   color: white;
   font-family: AppFont;
+  margin: 0;
 }
 
 .small-text {

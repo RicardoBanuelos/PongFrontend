@@ -1,6 +1,7 @@
 body {
-    margin: 0;
-    background-color: black;
+  min-width: 980px;
+  margin: 0;
+  background-color: black;
 }
 
 html, body { height: 100%; }
