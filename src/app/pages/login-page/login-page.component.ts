@@ -47,6 +47,7 @@ export class LoginPageComponent {
         "password" : this.loginForm.get('password')?.value
       }).then(
         (response) => {
+          console.log(response.data)
           this.authService.setToken(response.data.token)
           this.router.navigateByUrl('/user')
         }

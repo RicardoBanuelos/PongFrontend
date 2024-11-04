@@ -1,16 +1,18 @@
 <div class="test">
-  <div class="p-2"><p class="app-text small-text">05-12-2024</p></div>
+  <div class="p-2"><p class="app-text small-text">{{match.date}}</p></div>
   <div class="match-container">
     <div class="player-one-container">
       <p class="app-text medium-text" [ngStyle]="{'color': playerOneColor}">
-        {{playerOneUsername}}
+        {{match.playerOneUsername}}
       </p>
     </div>
     <div class="score-container">
       <p class="app-text medium-text">{{getScore()}}</p>
     </div>
     <div class="player-two-container">
-      <p class="app-text medium-text" [ngStyle]="{'color': playerTwoColor}">{{playerTwoUsername}}</p>
+      <p class="app-text medium-text" [ngStyle]="{'color': playerTwoColor}">
+        {{match.playerTwoUsername}}
+      </p>
     </div>
   </div>
 </div>

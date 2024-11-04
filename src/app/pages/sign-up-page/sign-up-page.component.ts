@@ -51,6 +51,7 @@ export class SignUpPageComponent  {
         "password" : this.signUpForm.get('password')?.value
       }).then(
         (response) => {
+          console.log(response.data)
           this.authService.setToken(response.data.token)
           this.router.navigateByUrl('/user')
         }

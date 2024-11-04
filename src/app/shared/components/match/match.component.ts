@@ -1,22 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Match } from '../../models/Match';
 
 @Component({
   selector: 'app-match',
   templateUrl: './match.component.html',
   styleUrls: ['./match.component.css']
 })
-export class MatchComponent {
-  playerOneUsername: string = "akaRicky";
-  playerTwoUsername: string = "SolielLumiere";
+export class MatchComponent implements OnInit {
+  @Input() match!: Match;
 
   playerOneColor: string = ''
   playerTwoColor: string = ''
 
-  playerOneScore: number = 11;
-  playerTwoScore: number = 10;
-
-  constructor() {
-    if(this.playerOneScore > this.playerTwoScore) {
+  ngOnInit(): void {
+    if(this.match.playerOneScore > this.match.playerTwoScore) {
       this.playerOneColor = "#00CC00";
       this.playerTwoColor = "red";
     }
@@ -27,12 +24,12 @@ export class MatchComponent {
   }
 
   playerOneWon(): boolean {
-    return this.playerOneScore > this.playerTwoScore;
+    return this.match.playerOneScore > this.match.playerTwoScore;
   }
 
   getScore(): string {
-    return this.playerOneScore.toString()
+    return this.match.playerOneScore.toString()
          + " - "
-         + this.playerTwoScore.toString();
+         + this.match.playerTwoScore.toString();
   }
 }

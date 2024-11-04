@@ -1,3 +1,4 @@
+import { Match } from './models/Match';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from '../pages/pages-routing.module';
@@ -19,7 +20,7 @@ import { MatchComponent } from './components/match/match.component';
     HomeTitleComponent,
     InputComponent,
     ErrorMessageComponent,
-    MatchComponent
+    MatchComponent,
   ],
   declarations: [
     NavbarComponent,

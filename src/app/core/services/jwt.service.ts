@@ -8,6 +8,15 @@ import { AuthService } from './auth.service';
 export class JwtService {
   constructor(private authService: AuthService){}
 
+  expired(): boolean {
+    const token: string | null = this.authService.getToken();
+    if(token === null)
+      return true;
+
+    const decoded = jwtDecode(token);
+    return decoded.exp! * 1000 < Date.now();
+  }
+
   getUsername(): string | null {
     const token: string | null = this.authService.getToken();
 

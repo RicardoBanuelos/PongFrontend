@@ -17,11 +17,6 @@ export class AuthService {
     return localStorage.getItem(this.tokenKey);
   }
 
-  getUsername(): string | null {
-    const token: string |null = this.getToken();
-    return token ? "TODO: Decode Token" : null;
-  }
-
   isLoggedIn(): boolean {
     return this.getToken() !== null;
   }
