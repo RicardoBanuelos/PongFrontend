@@ -1,4 +1,3 @@
-import { PagesModule } from './../../pages/pages.module';
 import { Injectable } from '@angular/core';
 import axios from 'axios';
 import { AuthService } from './auth.service';

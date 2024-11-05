@@ -16,7 +16,7 @@ export class UserPageComponent {
   matches: Match[] = [];
   totalPages: number = 0;
   wins: number = 0;
-  loses: number = 0;
+  losses: number = 0;
   page: number = 0;
 
   constructor(private axiosService: AxiosService,
@@ -48,8 +48,8 @@ export class UserPageComponent {
     }
   }
 
-  getMatches() {
-    this.axiosService.request(
+  async getMatches() {
+    await this.axiosService.request(
       "GET",
       `/matches?username=${this.username}&page=${this.page}&size=8`,
       {},
@@ -59,24 +59,19 @@ export class UserPageComponent {
     })
   }
 
-  calculateRecord() {
-    this.matches.forEach(match => {
-      const playerOneWon = match.playerOneScore > match.playerTwoScore;
-      if(playerOneWon)
-      {
-        this.wins += match.playerOneUsername === this.username ? 1 : 0;
-        this.loses += match.playerTwoUsername === this.username ? 1 : 0;
-      }
-      else
-      {
-        this.wins += match.playerTwoUsername === this.username ? 1 : 0;
-        this.loses += match.playerOneUsername === this.username ? 1 : 0;
-      }
-    });
+  async calculateRecord() {
+    await this.axiosService.request(
+      "GET",
+      `/matches/record?username=${this.username}`,
+      {},
+    ).then((response) => {
+      this.wins = response.data[0];
+      this.losses = response.data[1];
+    })
   }
 
   getRecord(): string {
-    return "W: " + this.wins + " | L: " + this.loses;
+    return "W: " + this.wins + " | L: " + this.losses;
   }
 
   morePages(): boolean {

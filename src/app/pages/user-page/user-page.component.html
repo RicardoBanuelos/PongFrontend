@@ -10,10 +10,9 @@
     <div *ngFor="let match of matches" class="match-history-container">
       <app-match [match]="match"></app-match>
     </div>
-    <div class="page-buttons-container">
+    <div class="page-buttons-container" *ngIf="this.totalPages > 1">
       <button
         class="app-font page-button"
-        *ngIf="this.totalPages > 1"
         (click)="previousPage()">
         Prev
       </button>
@@ -24,7 +23,6 @@
       </small>
       <button
         class="app-font page-button"
-        *ngIf="this.totalPages > 1"
         (click)="nextPage()">
         Next
       </button>
