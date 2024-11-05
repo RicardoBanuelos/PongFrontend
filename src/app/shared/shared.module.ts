@@ -1,4 +1,4 @@
-import { Match } from './models/Match';
+import { Match } from '../models/Match';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from '../pages/pages-routing.module';
